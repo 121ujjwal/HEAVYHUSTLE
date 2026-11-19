@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeavyHustle | Fitness Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+   
+<header>
+    <img src="Neon Heavy Hustle Fitness Logo.png" alt="HeavyHustle Logo" class="logo">
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#workout">Workout</a>
+        <a href="#nutrition">Nutrition</a>
+        <a href="#steps">Steps</a>
+        <a href="#sleep">Sleep</a>
+        <a href="#weight">Weight</a>
+        <a href="#records">PRs</a>
+    </nav>
+</header>
+
+<main>
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+        <p>Track your daily fitness progress.</p>
+
+
+<div class="dashboard-cards">
+    <div class="card">
+        <h3>Steps</h3>
+        <p id="dashboardSteps">0</p>
+    </div>
+
+    <div class="card">
+        <h3>Calories</h3>
+        <p id="dashboardCalories">0 kcal</p>
+    </div>
+
+    <div class="card">
+        <h3>Sleep</h3>
+        <p id="dashboardSleep">0 hours</p>
+    </div>
+
+    <div class="card">
+        <h3>Weight</h3>
+        <p id="dashboardWeight">0 kg</p>
+    </div>
+</div>
+
+
+    </section>
+<section id="workout">
+    <h2>My Workout</h2>
+    <p>Record your own exercises.</p>
+
+    <form id="workoutForm">
+        <label>Workout Name</label>
+        <input type="text" id="workoutName" required>
+
+        <label>Exercise Name</label>
+        <input type="text" id="exerciseName" required>
+
+        <label>Sets</label>
+        <input type="number" id="sets" required>
+
+        <label>Reps</label>
+        <input type="number" id="reps" required>
+
+        <label>Weight (kg)</label>
+        <input type="number" id="weight" required>
+
+        <button type="submit">Save Exercise</button>
+    </form>
+
+    <div id="exerciseList"></div>
+</section>
+
+
+<section id="nutrition">
+    <h2>Nutrition Tracker</h2>
+    <p>Track your daily food intake.</p>
+
+    <form id="foodForm">
+        <label>Food Name</label>
+        <input type="text" id="foodName" placeholder="Search food">
+
+        <label>Quantity (grams)</label>
+        <input type="number" id="foodQuantity" min="1" placeholder="Enter grams">
+
+        <button type="submit">Add Food</button>
+    </form>
+
+    <div class="nutrition-stats">
+        <p>Calories: <span id="totalCalories">0</span> kcal</p>
+        <p>Protein: <span id="totalProtein">0</span> g</p>
+        <p>Carbs: <span id="totalCarbs">0</span> g</p>
+        <p>Fats: <span id="totalFats">0</span> g</p>
+    </div>
+
+    <div id="foodList"></div>
+</section>
+
+<section id="steps">
+    <h2>Steps Tracker</h2>
+    <p>Track your daily steps.</p>
+
+    <form id="stepsForm">
+        <label>Daily Step Goal</label>
+        <input type="number" id="stepGoal" value="8000" min="1">
+
+        <label>Today's Steps</label>
+        <input type="number" id="dailySteps" placeholder="Enter steps" min="0">
+
+        <button type="submit">Save Steps</button>
+    </form>
+
+    <div class="steps-stats">
+        <h3>Today's Progress</h3>
+        <p><span id="stepsCount">0</span> steps</p>
+        <p><span id="stepsPercentage">0</span>% completed</p>
+    </div>
+</section>
+
+<section id="sleep">
+    <h2>Sleep Tracker</h2>
+    <p>Track your daily sleep hours.</p>
+
+    <form id="sleepForm">
+        <label>Sleep Time</label>
+        <input type="time" id="sleepTime">
+
+        <label>Wake Up Time</label>
+        <input type="time" id="wakeTime">
+
+        <button type="submit">Save Sleep</button>
+    </form>
+
+    <div class="sleep-stats">
+        <h3>Today's Sleep</h3>
+        <p><span id="sleepHours">0</span> hours</p>
+    </div>
+</section>
+
+<section id="weight">
+    <h2>Weight Tracker</h2>
+    <p>Track your weight history.</p>
+
+    <form id="weightForm">
+        <label>Today's Weight (kg)</label>
+        <input type="number" id="weightInput" placeholder="Enter weight" min="1" step="0.1">
+
+        <button type="submit">Save Weight</button>
+    </form>
+
+    <div class="weight-stats">
+        <h3>Current Weight</h3>
+        <p><span id="currentWeight">0</span> kg</p>
+    </div>
+
+    <div id="weightHistory"></div>
+</section>
+
+<section id="records">
+    <h2>Personal Records</h2>
+    <p>Track your personal best lifts.</p>
+
+    <form id="prForm">
+        <label>Exercise Name</label>
+        <input type="text" id="prExercise" required>
+
+        <label>Best Weight (kg)</label>
+        <input type="number" id="prWeight" required>
+
+        <label>Reps</label>
+        <input type="number" id="prReps" required>
+
+        <button type="submit">Save PR</button>
+    </form>
+
+    <div id="prList"></div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
